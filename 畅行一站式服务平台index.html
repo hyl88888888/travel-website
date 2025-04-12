@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>旅行探索 | 精彩每一程</title>
+  <style>
+    body { margin: 0; font-family: 'Helvetica Neue', sans-serif; scroll-behavior: smooth; }
+    header {
+      background: url('https://source.unsplash.com/1600x900/?travel') no-repeat center center;
+      background-size: cover;
+      height: 100vh;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-shadow: 0 0 10px rgba(0,0,0,0.6);
+      animation: fadeIn 2s ease-in-out;
+    }
+    nav {
+      position: fixed;
+      width: 100%;
+      background-color: rgba(0,0,0,0.5);
+      padding: 1em;
+      top: 0;
+      display: flex;
+      justify-content: center;
+      z-index: 1000;
+      animation: slideDown 1s ease-out;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1em;
+    }
+    section { padding: 60px 20px; max-width: 1000px; margin: auto; animation: fadeIn 1.5s ease-in; }
+    .routes { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+    .route-card {
+      width: 300px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      background: #fff;
+      transition: transform 0.3s;
+    }
+    .route-card:hover { transform: scale(1.05); }
+    .route-card img { width: 100%; height: 200px; object-fit: cover; }
+    .route-card h3 { margin: 10px; }
+    .reviews blockquote {
+      border-left: 5px solid #ccc;
+      padding-left: 1em;
+      margin: 1em 0;
+      font-style: italic;
+    }
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    audio {
+      display: none;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes slideDown {
+      from { transform: translateY(-100%); }
+      to { transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <audio autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2023/03/02/audio_f928d41a06.mp3?filename=dream-140253.mp3" type="audio/mpeg">
+    您的浏览器不支持音频播放。
+  </audio>
+
+  <nav>
+    <a href="#intro">关于我们</a>
+    <a href="#routes">旅游路线</a>
+    <a href="#reviews">用户评价</a>
+    <a href="#contact">联系我们</a>
+  </nav>
+  <header>
+    <h1>旅行探索</h1>
+    <p>发现世界之美，从这里启程</p>
+  </header>
+
+  <section id="intro">
+    <h2>关于我们</h2>
+    <p>我们是一家专注于深度旅行体验的服务团队，致力于为每一位旅客定制难忘的旅程。无论你是独自探险者，还是家庭出游，我们都能为你提供最适合的方案。</p>
+  </section>
+
+  <section id="routes">
+    <h2>精选旅游路线</h2>
+    <div class="routes">
+      <div class="route-card">
+        <img src="https://source.unsplash.com/400x300/?beach" alt="海滩之旅">
+        <h3>阳光海岸自由行</h3>
+        <p>畅游沙滩，品味海鲜，感受惬意时光。</p>
+      </div>
+      <div class="route-card">
+        <img src="https://source.unsplash.com/400x300/?mountains" alt="高原徒步">
+        <h3>高原徒步挑战</h3>
+        <p>深入山川秘境，挑战自我极限。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews" class="reviews">
+    <h2>用户评价</h2>
+    <blockquote>“整个旅程安排得非常贴心，导游很专业，下次还会选择他们！”</blockquote>
+    <blockquote>“景点不走马观花，是真正的深度体验。”</blockquote>
+  </section>
+
+  <section id="contact">
+    <h2>联系我们</h2>
+    <p>邮箱：contact@travel-explore.cn</p>
+    <p>电话：123-4567-8901</p>
+    <p>微信客服：TravelExplore官方号</p>
+    <iframe src="https://maps.google.com/maps?q=beijing&t=&z=10&ie=UTF8&iwloc=&output=embed"></iframe>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 旅行探索 Travel Explore. 保留所有权利。</p>
+  </footer>
+</body>
+</html>
